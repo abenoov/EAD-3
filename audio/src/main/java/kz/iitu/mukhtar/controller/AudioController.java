@@ -24,12 +24,12 @@ public class AudioController {
     }
 
     @GetMapping("/audio/list")
-    public ResponseEntity<List<Audio>> getMovie(){
+    public ResponseEntity<List<Audio>> getAudio(){
         return new ResponseEntity<>(audioRepository.findAll(), HttpStatus.OK);
     }
 
     @PostMapping("/audio")
-    public ResponseEntity<Audio> createMovie(@RequestBody Audio audio){
+    public ResponseEntity<Audio> createAudio(@RequestBody Audio audio){
         return new ResponseEntity<>(audioService.addMovie(audio), HttpStatus.CREATED);
     }
 
